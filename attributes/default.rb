@@ -24,11 +24,9 @@ default['supervisor']['inet_username'] = nil
 default['supervisor']['inet_password'] = nil
 case node['platform_family']
 when "smartos"
-  default['supervisor']['python_prefix_dir'] = '/opt/local'
   default['supervisor']['dir'] = '/opt/local/etc/supervisor.d'
   default['supervisor']['conffile'] = '/opt/local/etc/supervisord.conf'
 else
-  default['supervisor']['python_prefix_dir'] = '/usr'
   default['supervisor']['dir'] = '/etc/supervisor.d'
   default['supervisor']['conffile'] = '/etc/supervisord.conf'
 end
