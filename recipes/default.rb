@@ -17,7 +17,9 @@
 # limitations under the License.
 #
 
-include_recipe "poise-python"
+python_runtime 'supervisor' do
+  version '2'
+end
 
 # foodcritic FC023: we prefer not having the resource on non-smartos
 if platform_family?("smartos")
